@@ -122,3 +122,6 @@ Best Model: Width + Length Three
 Best Two Regression Model: Length 3 + Width
 
 ## Final Summary Statements
+
+The results presented here reveal significant variation in predictive metrics among different fish species. Specifically, for Perch, Pike, and Roach, distinct models emerged as the most effective in predicting their overall weight. Automation was key in determining the model of best fit.
+
