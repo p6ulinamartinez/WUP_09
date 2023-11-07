@@ -51,6 +51,20 @@ Whitefish <- select(Whitefish, -Species)
 
 ## Perch
 
+```{r}
+Perch.out <-
+    regsubsets(Weight ~ .,
+               data = Perch,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+Perch.Summary <- summary(Perch.out)
+as.data.frame(Perch.Summary$outmat)
+subsets(Perch.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
 ### Best Models
 
 ### Best Two regressor model
