@@ -71,6 +71,7 @@ Best Single Model: Height + Width
 
 ### Best Two regressor model
 
+Best Double Model: Height + Width
 
 ## Pike
 
