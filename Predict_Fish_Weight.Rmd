@@ -99,6 +99,20 @@ Best Two Regression Model: L1-L3
 
 ## Roach
 
+```{r}
+Roach.out <-
+    regsubsets(Weight ~ .,
+               data = Roach,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+Roach.Summary <- summary(Roach.out)
+as.data.frame(Roach.Summary$outmat)
+subsets(Roach.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
 ### Best Models
 
 ### Best Two regressor model
