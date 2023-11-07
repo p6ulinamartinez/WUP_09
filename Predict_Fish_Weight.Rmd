@@ -75,6 +75,20 @@ Best Double Model: Height + Width
 
 ## Pike
 
+```{r}
+Pike.out <-
+    regsubsets(Weight ~ .,
+               data = Pike,
+               nbest = 1,      
+               nvmax = NULL,   
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+Pike.Summary <- summary(Pike.out)
+as.data.frame(Pike.Summary$outmat)
+subsets(Pike.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
 ### Best Models
 
 ### Best Two regressor model
