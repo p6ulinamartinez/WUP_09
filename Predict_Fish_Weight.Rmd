@@ -115,6 +115,8 @@ subsets(Roach.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 
 ### Best Models
 
+Best Model: Width + Length Three
+
 ### Best Two regressor model
 
 ## Final Summary Statements
